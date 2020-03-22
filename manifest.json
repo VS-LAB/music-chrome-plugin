@@ -1,0 +1,26 @@
+{
+  "name": "J-MUSIC",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "content_scripts": [{
+      "run_at": "document_end",
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["/js/background.js"]
+  }],
+  "description": "支持正版版权，欢迎去冲绿钻。",
+  "browser_action": {
+      "default_title": "J-MUSIC"
+  },
+  "chrome_url_overrides": {
+    "newtab": "popup.html"
+  },
+  "icons":{
+    "16": "/icon/music@16.png",
+    "48": "/icon/music@48.png",
+    "128": "/icon/music@128.png"
+  },
+  "permissions": [
+    "https://juxm0pdl.lc-cn-e1-shared.com/1.1/classes/music",
+    "https://juxm0pdl.lc-cn-e1-shared.com"
+  ]
+}
